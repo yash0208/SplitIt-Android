@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    tools:context=".AddExpense">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageButton
+            android:onClick="back"
+            android:layout_width="40dp"
+            android:layout_marginTop="5dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_height="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Expense"
+            android:textColor="#1e1e1e"
+            android:fontFamily="@font/poppins"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Partner's Email"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Ex: friend@gmail.com"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/email"
+                android:inputType="textEmailAddress"
+                android:textColor="#1e1e1e"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Expense Description"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Ex: Momo's Bill"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/desc"
+                android:inputType="text"
+                android:textColor="#1e1e1e"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Cost (Rs)"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Ex: 100"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/cost"
+                android:inputType="number"
+                android:textColor="#1e1e1e"
+                android:layout_height="50dp"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:onClick="onclickbuttonMethod"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paid By You"
+                    android:onClick="onclickbuttonMethod"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="fill_parent"
+                    android:onClick="onclickbuttonMethod"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Paid By Partner"
+                    android:checked="false"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp" />
+            </RadioGroup>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            android:contentDescription="Submit"
+            android:layout_margin="16dp" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/traker"
+    android:paddingBottom="10dp"
+    android:paddingTop="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="friend@gmail.com"
+            android:textSize="18dp"
+            android:id="@+id/desc"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginLeft="10dp"
+            android:textColor="#1e1e1e"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Momos Charge"
+            android:id="@+id/partner"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#1e1e1e"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You Owe 50 Rs"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/amount"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#1e1e1e"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/settle"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/settle"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Settle Up"
+                />
+            <Button
+                android:id="@+id/reminder"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/reminder"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Reminder"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/id"/>
+    </LinearLayout>
+</FrameLayout>
